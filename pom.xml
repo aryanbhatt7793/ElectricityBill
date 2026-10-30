@@ -1,3 +1,4 @@
+
 <?xml version="1.0" encoding="UTF-8"?>
 
 <project xmlns="http://maven.apache.org/POM/4.0.0"
@@ -26,6 +27,15 @@
             <scope>test</scope>
         </dependency>
     </dependencies>
+
+    <!-- Local deployment repository for Jenkins practical -->
+    <distributionManagement>
+        <repository>
+            <id>local-deployment</id>
+            <name>Local Maven Deployment Repository</name>
+            <url>file:./target/deployment-repo</url>
+        </repository>
+    </distributionManagement>
 
     <build>
         <plugins>
